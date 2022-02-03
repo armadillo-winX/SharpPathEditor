@@ -1,0 +1,43 @@
+﻿<Window x:Class="SharpPathEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SharpPathEditor"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="385" Width="600" Loaded="Window_Loaded">
+    <Grid>
+        <Menu Height="20" VerticalAlignment="Top">
+            <MenuItem Header="ファイル(_F)" Height="20">
+                <MenuItem x:Name="SaveSystemPathMenuItem" Header="システムパスを保存" Click="SaveSystemPathMenuItem_Click" />
+                <MenuItem x:Name="SaveCurrentUserPathMenuItem" Header="現在のユーザーパスを保存" Click="SaveCurrentUserPathMenuItem_Click"/>
+                <Separator/>
+                <MenuItem x:Name="ReloadPathMenuItem" Header="Pathを再読み込み" Click="ReloadPathMenuItem_Click"/>
+                <Separator/>
+                <MenuItem x:Name="ExitMenu" Header="終了(_X)" Click="ExitMenu_Click"/>
+            </MenuItem>
+            <MenuItem Header="ヘルプ(_H)" Height="20">
+                <MenuItem x:Name="AboutMenuItem" Header="このソフトについて" Click="AboutMenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <TabControl Margin="0,25,0,0">
+            <TabItem Header="システム">
+                <Grid>
+                    <ListBox x:Name="SystemPathListBox" Margin="10,10,105,10"></ListBox>
+                    <Button x:Name="NewSystemPathButton" Content="新規(_N)" Width="90" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Click="NewSystemPathButton_Click"/>
+                    <Button x:Name="DeleteSystemPathButton" Content="削除(_D)" Margin="0,35,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="90" Click="DeleteSystemPathButton_Click"/>
+                    <Button x:Name="SaveSystemPathButton" Content="保存(_S)" Click="SaveSystemPathMenuItem_Click" HorizontalAlignment="Right" Margin="0,0,10,10" Width="90" Height="20" VerticalAlignment="Bottom"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="現在のユーザー">
+                <Grid>
+                    <ListBox x:Name="CurrentUserPathListBox" Margin="10,10,105,10"></ListBox>
+                    <Button x:Name="NewCurrentUserPathButton" Content="新規(_N)" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="90" Click="NewCurrentUserPathButton_Click"/>
+                    <Button x:Name="DeleteCurrentUserPathButton" Content="削除(_D)" HorizontalAlignment="Right" Margin="0,35,10,0" VerticalAlignment="Top" Width="90" Click="DeleteCurrentUserPathButton_Click"/>
+                    <Button x:Name="SaveCurrentUserPathButton" Content="保存(_S)" Click="SaveCurrentUserPathMenuItem_Click" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="90"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
