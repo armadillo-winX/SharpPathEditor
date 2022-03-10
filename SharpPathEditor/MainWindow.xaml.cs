@@ -178,9 +178,6 @@ namespace SharpPathEditor
             
         }
 
-
-
-
         private void ChangeSystemPathButton_Click(object sender, RoutedEventArgs e)
         {
             if (SystemPathListBox.SelectedIndex != -1)
@@ -268,9 +265,9 @@ namespace SharpPathEditor
             if (index != -1 && index != CurrentUserPathListBox.Items.Count - 1)
             {
 
-                string temp_path = CurrentUserPathListBox.SelectedValue.ToString();
+                string currentPath = CurrentUserPathListBox.SelectedValue.ToString();
                 CurrentUserPathListBox.Items[index] = CurrentUserPathListBox.Items[CurrentUserPathListBox.SelectedIndex + 1].ToString();
-                CurrentUserPathListBox.Items[index + 1] = temp_path;
+                CurrentUserPathListBox.Items[index + 1] = currentPath;
 
                 CurrentUserPathListBox.SelectedIndex = index + 1;
             }
