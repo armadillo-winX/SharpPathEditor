@@ -7,11 +7,11 @@ namespace SharpPathEditor
     /// </summary>
     public partial class NewPathDialog : Window
     {
-        private string _oldPath;
+        private string? _oldPath;
 
         public string Path { get; set; }
         
-        private string OldPath 
+        public string? OldPath 
         { 
             get 
             { 
@@ -26,11 +26,9 @@ namespace SharpPathEditor
         }
 
 #pragma warning disable CS8618 // null 非許容のフィールドには、コンストラクターの終了時に null 以外の値が入っていなければなりません。Null 許容として宣言することをご検討ください。
-        public NewPathDialog(string path = "")
+        public NewPathDialog()
 #pragma warning restore CS8618 // null 非許容のフィールドには、コンストラクターの終了時に null 以外の値が入っていなければなりません。Null 許容として宣言することをご検討ください。
         {
-            OldPath = path;
-
             InitializeComponent();
             _ = PathTextBox.Focus();
         }

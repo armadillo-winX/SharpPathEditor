@@ -181,7 +181,8 @@ namespace SharpPathEditor
         {
             if (SystemPathListBox.SelectedIndex != -1)
             {
-                NewPathDialog newPathDialog = new(SystemPathListBox.SelectedValue.ToString() ?? "");
+                NewPathDialog newPathDialog = new();
+                newPathDialog.OldPath = SystemPathListBox.SelectedValue.ToString();
                 newPathDialog.Owner = this;
                 if (newPathDialog.ShowDialog() == true)
                 {
@@ -228,7 +229,8 @@ namespace SharpPathEditor
         {
             if (CurrentUserPathListBox.SelectedIndex != -1)
             {
-                NewPathDialog newPathDialog = new(CurrentUserPathListBox.SelectedValue.ToString() ?? "");
+                NewPathDialog newPathDialog = new();
+                newPathDialog.OldPath = CurrentUserPathListBox.SelectedValue.ToString();
                 newPathDialog.Owner = this;
                 if (newPathDialog.ShowDialog() == true)
                 {
