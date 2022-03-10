@@ -191,12 +191,6 @@ namespace SharpPathEditor
                     SystemPathListBox.Items[SystemPathListBox.SelectedIndex] = path;
                 }
             }
-            else
-            {
-                _ = MessageBox.Show(this, "PATHを選んでください", "Path 編集",
-                    MessageBoxButton.OK, MessageBoxImage.Exclamation);
-            }
-
         }
         private void UpSystemPathButton_Click(object sender, RoutedEventArgs e)
         {
@@ -238,11 +232,6 @@ namespace SharpPathEditor
 
                     CurrentUserPathListBox.Items[CurrentUserPathListBox.SelectedIndex] = path;
                 }
-            }
-            else
-            {
-                _ = MessageBox.Show(this, "PATHを選んでください", "Path 編集",
-                    MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
         }
 
