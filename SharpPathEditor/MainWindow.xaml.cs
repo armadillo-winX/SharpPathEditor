@@ -32,7 +32,11 @@ namespace SharpPathEditor
                 {
                     foreach (string systemPath in systemPathList)
                     {
-                        SystemPathListBox.Items.Add(systemPath);
+                        if(systemPath != "")
+                        {
+                            SystemPathListBox.Items.Add(systemPath);
+                        }
+
                     }
                 }
 
@@ -41,7 +45,11 @@ namespace SharpPathEditor
                 {
                     foreach (string currentUserPath in currentUserPathList)
                     {
-                        CurrentUserPathListBox.Items.Add(currentUserPath);
+                        if(currentUserPath != "")
+                        {
+                            CurrentUserPathListBox.Items.Add(currentUserPath);
+                        }
+
                     }
                 }
             }
@@ -167,6 +175,105 @@ namespace SharpPathEditor
         private void ReloadPathMenuItem_Click(object sender, RoutedEventArgs e)
         {
             GetPathList();
+            
+        }
+
+
+
+
+        private void ChangeSystemPathButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (SystemPathListBox.SelectedIndex != -1)
+            {
+                NewPathDialog newPathDialog = new(SystemPathListBox.SelectedValue.ToString() ?? "");
+                newPathDialog.Owner = this;
+                if (newPathDialog.ShowDialog() == true)
+                {
+                    string path = newPathDialog.Path;
+
+                    SystemPathListBox.Items[SystemPathListBox.SelectedIndex] = path;
+                }
+            }
+            else
+            {
+                _ = MessageBox.Show(this, "PATHを選んでください", "Path 編集",
+                    MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
+
+        }
+        private void UpSystemPathButton_Click(object sender, RoutedEventArgs e)
+        {
+            int index = SystemPathListBox.SelectedIndex;
+            if (index >= 1)
+            {
+
+                string temp_path = SystemPathListBox.SelectedValue.ToString();
+                SystemPathListBox.Items[index] = SystemPathListBox.Items[SystemPathListBox.SelectedIndex - 1].ToString();
+                SystemPathListBox.Items[index - 1] = temp_path;
+
+                SystemPathListBox.SelectedIndex = index - 1;
+            }
+        }
+        private void DownSystemPathButton_Click(object sender, RoutedEventArgs e)
+        {
+            int index = SystemPathListBox.SelectedIndex;
+            if (index != -1 && index != SystemPathListBox.Items.Count - 1)
+            {
+
+                string temp_path = SystemPathListBox.SelectedValue.ToString();
+                SystemPathListBox.Items[index] = SystemPathListBox.Items[SystemPathListBox.SelectedIndex + 1].ToString();
+                SystemPathListBox.Items[index + 1] = temp_path;
+
+                SystemPathListBox.SelectedIndex = index + 1;
+            }
+        }
+
+        private void ChangeCurrentUserPathButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (CurrentUserPathListBox.SelectedIndex != -1)
+            {
+                NewPathDialog newPathDialog = new(CurrentUserPathListBox.SelectedValue.ToString() ?? "");
+                newPathDialog.Owner = this;
+                if (newPathDialog.ShowDialog() == true)
+                {
+                    string path = newPathDialog.Path;
+
+                    CurrentUserPathListBox.Items[CurrentUserPathListBox.SelectedIndex] = path;
+                }
+            }
+            else
+            {
+                _ = MessageBox.Show(this, "PATHを選んでください", "Path 編集",
+                    MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
+        }
+
+        private void UpCurrentUserPathButton_Click(object sender, RoutedEventArgs e)
+        {
+            int index = CurrentUserPathListBox.SelectedIndex;
+            if (index >= 1)
+            {
+
+                string temp_path = CurrentUserPathListBox.SelectedValue.ToString();
+                CurrentUserPathListBox.Items[index] = CurrentUserPathListBox.Items[CurrentUserPathListBox.SelectedIndex - 1].ToString();
+                CurrentUserPathListBox.Items[index - 1] = temp_path;
+
+                CurrentUserPathListBox.SelectedIndex = index - 1;
+            }
+        }
+
+        private void DownCurrentUserPathButton_Click(object sender, RoutedEventArgs e)
+        {
+            int index = CurrentUserPathListBox.SelectedIndex;
+            if (index != -1 && index != CurrentUserPathListBox.Items.Count - 1)
+            {
+
+                string temp_path = CurrentUserPathListBox.SelectedValue.ToString();
+                CurrentUserPathListBox.Items[index] = CurrentUserPathListBox.Items[CurrentUserPathListBox.SelectedIndex + 1].ToString();
+                CurrentUserPathListBox.Items[index + 1] = temp_path;
+
+                CurrentUserPathListBox.SelectedIndex = index + 1;
+            }
         }
     }
 }

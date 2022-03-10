@@ -8,16 +8,20 @@ namespace SharpPathEditor
     public partial class NewPathDialog : Window
     {
         public string Path { get; set; }
+        string path_before = "";
 
 #pragma warning disable CS8618 // null 非許容のフィールドには、コンストラクターの終了時に null 以外の値が入っていなければなりません。Null 許容として宣言することをご検討ください。
-        public NewPathDialog()
+        public NewPathDialog(string path = "")
 #pragma warning restore CS8618 // null 非許容のフィールドには、コンストラクターの終了時に null 以外の値が入っていなければなりません。Null 許容として宣言することをご検討ください。
         {
+            path_before = path;
+
             InitializeComponent();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            PathTextBox.Text = path_before;
             _ = PathTextBox.Focus();
         }
 
@@ -40,6 +44,11 @@ namespace SharpPathEditor
         private void BrowseButton_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Forms.FolderBrowserDialog folderBrowserDialog = new();
+            if(PathTextBox.Text != "")
+            {
+                folderBrowserDialog.SelectedPath = PathTextBox.Text;
+            }
+
             if (folderBrowserDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 PathTextBox.Text = folderBrowserDialog.SelectedPath;
