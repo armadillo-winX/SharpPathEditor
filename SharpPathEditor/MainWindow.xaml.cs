@@ -175,7 +175,6 @@ namespace SharpPathEditor
         private void ReloadPathMenuItem_Click(object sender, RoutedEventArgs e)
         {
             GetPathList();
-            
         }
 
         private void ChangeSystemPathButton_Click(object sender, RoutedEventArgs e)
