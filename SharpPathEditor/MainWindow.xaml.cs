@@ -18,6 +18,7 @@ namespace SharpPathEditor
             InitializeComponent();
 
             this.Title = _appName;
+            GetPathList();
         }
 
         private void GetPathList()
@@ -146,11 +147,6 @@ namespace SharpPathEditor
         private void SaveCurrentUserPathMenuItem_Click(object sender, RoutedEventArgs e)
         {
             SaveCurrentUserPath();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            GetPathList();
         }
 
         private void AboutMenuItem_Click(object sender, RoutedEventArgs e)
