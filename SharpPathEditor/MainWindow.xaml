@@ -26,6 +26,11 @@
                     <ListBox x:Name="SystemPathListBox" Margin="10,10,105,10"></ListBox>
                     <Button x:Name="NewSystemPathButton" Content="新規(_N)" Width="90" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Click="NewSystemPathButton_Click"/>
                     <Button x:Name="DeleteSystemPathButton" Content="削除(_D)" Margin="0,35,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="90" Click="DeleteSystemPathButton_Click"/>
+                    
+                    <Button x:Name="ChangeSystemPathButton" Content="編集(_E)" Width="90" HorizontalAlignment="Right" Margin="0,60,10,0" VerticalAlignment="Top" Click="ChangeSystemPathButton_Click"/>
+                    <Button x:Name="UpSystemPathButton" Content="上へ(_U)" Margin="0,85,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="90" Click="UpSystemPathButton_Click"/>
+                    <Button x:Name="DownSystemPathButton" Content="下へ(_O)" Margin="0,110,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="90" Click="DownSystemPathButton_Click"/>
+                    
                     <Button x:Name="SaveSystemPathButton" Content="保存(_S)" Click="SaveSystemPathMenuItem_Click" HorizontalAlignment="Right" Margin="0,0,10,10" Width="90" Height="20" VerticalAlignment="Bottom"/>
                 </Grid>
             </TabItem>
@@ -34,6 +39,11 @@
                     <ListBox x:Name="CurrentUserPathListBox" Margin="10,10,105,10"></ListBox>
                     <Button x:Name="NewCurrentUserPathButton" Content="新規(_N)" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="90" Click="NewCurrentUserPathButton_Click"/>
                     <Button x:Name="DeleteCurrentUserPathButton" Content="削除(_D)" HorizontalAlignment="Right" Margin="0,35,10,0" VerticalAlignment="Top" Width="90" Click="DeleteCurrentUserPathButton_Click"/>
+
+                    <Button x:Name="ChangeCurrentUserPathButton" Content="編集(_E)" Width="90" HorizontalAlignment="Right" Margin="0,60,10,0" VerticalAlignment="Top" Click="ChangeCurrentUserPathButton_Click"/>
+                    <Button x:Name="UpCurrentUserPathButton" Content="上へ(_U)" Margin="0,85,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="90" Click="UpCurrentUserPathButton_Click"/>
+                    <Button x:Name="DownCurrentUserPathButton" Content="下へ(_O)" Margin="0,110,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="90" Click="DownCurrentUserPathButton_Click"/>
+                    
                     <Button x:Name="SaveCurrentUserPathButton" Content="保存(_S)" Click="SaveCurrentUserPathMenuItem_Click" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="90"/>
                 </Grid>
             </TabItem>
