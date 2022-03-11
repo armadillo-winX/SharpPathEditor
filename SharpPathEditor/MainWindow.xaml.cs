@@ -23,15 +23,10 @@ namespace SharpPathEditor
             try
             {
                 MainWindowSettings mainWindowSettings = MainWindowSettings.ConfigureMainWindowSettings();
-                if (!mainWindowSettings.IsMaximize)
-                {
-                    this.Width = mainWindowSettings.Width;
-                    this.Height = mainWindowSettings.Height;
-                }
-                else
-                {
+                this.Width = mainWindowSettings.Width;
+                this.Height = mainWindowSettings.Height;
+                if (mainWindowSettings.IsMaximize)
                     this.WindowState = WindowState.Maximized;
-                }
             }
             catch (Exception ex)
             {
