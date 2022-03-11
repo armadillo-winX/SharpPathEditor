@@ -11,7 +11,7 @@
         SizeToContent="Height" >
     <Grid>
         <TextBlock x:Name="MessageBlock" Margin="10,10,10,34" TextWrapping="Wrap" Text=""/>
-        <Button x:Name="OKButton" Content="_OK" Width="90" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Click="OKButton_Click"/>
+        <Button x:Name="OKButton" IsDefault="True" Content="_OK" Width="90" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Click="OKButton_Click"/>
 
     </Grid>
 </Window>
