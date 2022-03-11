@@ -24,9 +24,10 @@ https://github.com/armadillo-winX/SharpPathEditor
 ○更新履歴
 
 ver1.1.0
+・設定保存機能を追加。
 pull request by kaonashi_biwa
- ・Path の編集機能追加
- ・Path の上下移動
+ ・Path の編集機能追加。
+ ・Path の上下移動。
  ・その他軽微な修正。
 
 ver1.0.0
