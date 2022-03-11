@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
+using SharpPathEditor.Dialogs;
 
 namespace SharpPathEditor
 {
@@ -55,8 +56,7 @@ namespace SharpPathEditor
             }
             catch (Exception ex)
             {
-                _ = MessageBox.Show(this, ex.Message, "エラー",
-                    MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageDialog.ShowErrorMessageDialog(ex.Message);
             }
         }
 
