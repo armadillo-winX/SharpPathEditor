@@ -9,6 +9,11 @@ Windows 10/Windows 11
 
 .NET Desktop Runtime 6.0 が必要です。
 
+○開発環境
+Microsoft Windows 11 Insider Preview Dev
+Microsoft Visual Studio 2022
+.NET 6.0
+
 ○ソースコード
 ソースコードはGitHubに公開しています。
 https://github.com/armadillo-winX/SharpPathEditor
