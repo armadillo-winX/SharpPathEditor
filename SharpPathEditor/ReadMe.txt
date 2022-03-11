@@ -9,9 +9,13 @@ Windows 10/Windows 11
 
 .NET Desktop Runtime 6.0 が必要です。
 
+○ソースコード
+ソースコードはGitHubに公開しています。
+https://github.com/armadillo-winX/SharpPathEditor
+
 ○免責事項
 ・本ソフトウェアはレジストリを編集します。
-  編集される値は下に示すとおりです。
+  編集される値は下に示す通りです。
   ・HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment\Path
   ・HKEY_CURRENT_USER\Environment\Path
 
