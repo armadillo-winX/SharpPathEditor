@@ -15,7 +15,7 @@ namespace SharpPathEditor
 
         public static void SaveMainWindowSettings(MainWindowSettings mainWindowSettings)
         {
-            string? mainWindowSettingsFile = PathInfo.MainWindowSettings;
+            string? mainWindowSettingsFile = FilePathInfo.MainWindowSettings;
 
             XmlSerializer mainWindowSettingsSerializer = new(typeof(MainWindowSettings));
             FileStream fs = new(mainWindowSettingsFile, FileMode.Create);
@@ -25,7 +25,7 @@ namespace SharpPathEditor
 
         public static MainWindowSettings ConfigureMainWindowSettings()
         {
-            string? mainWindowSettingsFile = PathInfo.MainWindowSettings;
+            string? mainWindowSettingsFile = FilePathInfo.MainWindowSettings;
 
             MainWindowSettings mainWindowSettings = new();
             if (File.Exists(mainWindowSettingsFile))

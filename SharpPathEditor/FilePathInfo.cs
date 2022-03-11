@@ -2,7 +2,7 @@
 
 namespace SharpPathEditor
 {
-    internal class PathInfo
+    internal class FilePathInfo
     {
         public static string AppPath => typeof(App).Assembly.Location;
 
