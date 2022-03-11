@@ -16,6 +16,9 @@
                 <Separator/>
                 <MenuItem x:Name="ExitMenu" Header="終了(_X)" Click="ExitMenu_Click"/>
             </MenuItem>
+            <MenuItem Header="ツール(_T)" Height="20">
+                <MenuItem x:Name="LaunchCmdMenuItem" Header="コマンドプロンプトを起動(管理者)" Click="LaunchCmdMenuItem_Click"/>
+            </MenuItem>
             <MenuItem Header="ヘルプ(_H)" Height="20">
                 <MenuItem x:Name="AboutMenuItem" Header="このソフトについて" Click="AboutMenuItem_Click"/>
             </MenuItem>

@@ -295,5 +295,18 @@ namespace SharpPathEditor
 
             }
         }
+
+        private void LaunchCmdMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                ApplicationLauncher.LaunchCommandPrompt();
+            }
+            catch (Exception ex)
+            {
+                _ = MessageBox.Show(this, ex.Message, "エラー",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }
