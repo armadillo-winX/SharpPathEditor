@@ -19,6 +19,26 @@ namespace SharpPathEditor
             InitializeComponent();
 
             this.Title = _appName;
+
+            try
+            {
+                MainWindowSettings mainWindowSettings = MainWindowSettings.ConfigureMainWindowSettings();
+                if (!mainWindowSettings.IsMaximize)
+                {
+                    this.Width = mainWindowSettings.Width;
+                    this.Height = mainWindowSettings.Height;
+                }
+                else
+                {
+                    this.WindowState = WindowState.Maximized;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageDialog.ShowErrorMessageDialog(ex.Message);
+                Environment.Exit(-1);
+            }
+
             GetPathList();
         }
 
@@ -260,6 +280,22 @@ namespace SharpPathEditor
                 CurrentUserPathListBox.Items[index + 1] = currentPath;
 
                 CurrentUserPathListBox.SelectedIndex = index + 1;
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            try
+            {
+                MainWindowSettings mainWindowSettings = new();
+                mainWindowSettings.Width = this.Width;
+                mainWindowSettings.Height = this.Height;
+                mainWindowSettings.IsMaximize = this.WindowState == WindowState.Maximized;
+                MainWindowSettings.SaveMainWindowSettings(mainWindowSettings);
+            }
+            catch (Exception)
+            {
+
             }
         }
     }

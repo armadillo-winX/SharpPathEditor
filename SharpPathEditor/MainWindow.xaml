@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SharpPathEditor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="385" Width="600">
+        Title="MainWindow" Height="385" Width="600" Closing="Window_Closing">
     <Grid>
         <Menu Height="20" VerticalAlignment="Top">
             <MenuItem Header="ファイル(_F)" Height="20">
