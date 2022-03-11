@@ -11,6 +11,8 @@ namespace SharpPathEditor
 
         public bool IsMaximize { get; set; }
 
+        public int SelectedTabIndex { get; set; }
+
         public static void SaveMainWindowSettings(MainWindowSettings mainWindowSettings)
         {
             string? mainWindowSettingsFile = PathInfo.MainWindowSettings;
@@ -39,6 +41,7 @@ namespace SharpPathEditor
                 mainWindowSettings.Width = 600;
                 mainWindowSettings.Height = 385;
                 mainWindowSettings.IsMaximize = false;
+                mainWindowSettings.SelectedTabIndex = 0;
             }
             return mainWindowSettings;
         }

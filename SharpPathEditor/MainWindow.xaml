@@ -20,7 +20,7 @@
                 <MenuItem x:Name="AboutMenuItem" Header="このソフトについて" Click="AboutMenuItem_Click"/>
             </MenuItem>
         </Menu>
-        <TabControl Margin="0,25,0,0">
+        <TabControl x:Name="MainTabControl" Margin="0,25,0,0">
             <TabItem Header="システム">
                 <Grid>
                     <ListBox x:Name="SystemPathListBox" Margin="10,10,105,10"></ListBox>

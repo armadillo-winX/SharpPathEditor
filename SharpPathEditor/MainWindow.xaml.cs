@@ -27,6 +27,7 @@ namespace SharpPathEditor
                 this.Height = mainWindowSettings.Height;
                 if (mainWindowSettings.IsMaximize)
                     this.WindowState = WindowState.Maximized;
+                MainTabControl.SelectedIndex = mainWindowSettings.SelectedTabIndex;
             }
             catch (Exception ex)
             {
@@ -286,6 +287,7 @@ namespace SharpPathEditor
                 mainWindowSettings.Width = this.Width;
                 mainWindowSettings.Height = this.Height;
                 mainWindowSettings.IsMaximize = this.WindowState == WindowState.Maximized;
+                mainWindowSettings.SelectedTabIndex = MainTabControl.SelectedIndex;
                 MainWindowSettings.SaveMainWindowSettings(mainWindowSettings);
             }
             catch (Exception)
