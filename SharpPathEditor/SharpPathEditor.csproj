@@ -15,7 +15,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Refresh_16x.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Refresh_16x.png" />
   </ItemGroup>
 
   <ItemGroup>
