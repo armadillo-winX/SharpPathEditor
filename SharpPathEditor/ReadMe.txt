@@ -28,6 +28,10 @@ https://github.com/armadillo-winX/SharpPathEditor
 
 ○更新履歴
 
+ver1.2.0 beta
+・ツールバー追加。
+・Windowsツールの起動コマンド追加。
+
 ver1.1.0
 ・設定保存機能を追加。
 pull request by kaonashi_biwa
