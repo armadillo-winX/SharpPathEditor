@@ -6,10 +6,10 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <Version>1.1.0</Version>
-    <Authors>Kyuyo</Authors>
-    <Company>Kyuyo</Company>
+    <Authors>Mashiro Tamane</Authors>
+    <Company>Mashiro Tamane</Company>
     <Product>Sharp Path Editor</Product>
-    <Copyright>Copyright © 2022 Kyuyo</Copyright>
+    <Copyright>Copyright © 2022 Mashiro Tamane</Copyright>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <UseWindowsForms>True</UseWindowsForms>
   </PropertyGroup>
