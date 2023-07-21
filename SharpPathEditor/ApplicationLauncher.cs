@@ -18,5 +18,18 @@ namespace SharpPathEditor
 
             _ = Process.Start(processStartInfo);
         }
+
+        public static void LaunchRegstryEditor()
+        {
+            string windowsDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Windows);
+
+            ProcessStartInfo processStartInfo = new();
+            processStartInfo.FileName = $"{windowsDirectory}\\regedit.exe";
+            processStartInfo.WorkingDirectory = windowsDirectory;
+            processStartInfo.Verb = "runas";
+            processStartInfo.UseShellExecute = true;
+
+            _ = Process.Start(processStartInfo);
+        }
     }
 }

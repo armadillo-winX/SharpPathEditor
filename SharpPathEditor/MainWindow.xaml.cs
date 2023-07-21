@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows;
+using System.Windows.Forms;
 using SharpPathEditor.Dialogs;
 
 namespace SharpPathEditor
@@ -82,12 +83,12 @@ namespace SharpPathEditor
             try
             {
                 EditPath.SaveSystemPath(systemPathList);
-                _ = MessageBox.Show(this, "保存しました。", _appName,
+                _ = System.Windows.MessageBox.Show(this, "保存しました。", _appName,
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
-                _ = MessageBox.Show(this, ex.Message, "エラー",
+                _ = System.Windows.MessageBox.Show(this, ex.Message, "エラー",
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -98,12 +99,12 @@ namespace SharpPathEditor
             try
             {
                 EditPath.SaveCurrentUserPath(currentUserPathList);
-                _ = MessageBox.Show(this, "保存しました。", _appName,
+                _ = System.Windows.MessageBox.Show(this, "保存しました。", _appName,
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
-                _ = MessageBox.Show(this, ex.Message, "エラー",
+                _ = System.Windows.MessageBox.Show(this, ex.Message, "エラー",
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -128,7 +129,7 @@ namespace SharpPathEditor
         {
             if (SystemPathListBox.SelectedIndex > -1)
             {
-                MessageBoxResult result = MessageBox.Show(
+                MessageBoxResult result = System.Windows.MessageBox.Show(
                     this, $"'{SystemPathListBox.SelectedItem}' を削除しますか?", "削除の確認",
                     MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
                 if (result == MessageBoxResult.Yes)
@@ -158,7 +159,7 @@ namespace SharpPathEditor
         {
             if (CurrentUserPathListBox.SelectedIndex > -1)
             {
-                MessageBoxResult result = MessageBox.Show(
+                MessageBoxResult result = System.Windows.MessageBox.Show(
                     this, $"'{CurrentUserPathListBox.SelectedItem}' を削除しますか?", "削除の確認",
                     MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
                 if (result == MessageBoxResult.Yes)
@@ -304,7 +305,20 @@ namespace SharpPathEditor
             }
             catch (Exception ex)
             {
-                _ = MessageBox.Show(this, ex.Message, "エラー",
+                _ = System.Windows.MessageBox.Show(this, ex.Message, "エラー",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void LaunchRegeditMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                ApplicationLauncher.LaunchRegstryEditor();
+            }
+            catch (Exception ex)
+            {
+                _ = System.Windows.MessageBox.Show(this, ex.Message, "エラー",
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
