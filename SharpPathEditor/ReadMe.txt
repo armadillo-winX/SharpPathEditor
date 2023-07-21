@@ -1,5 +1,5 @@
 ﻿Sharp Path Editor ver1.x.x
-Copyright © 2022 Kyuyo
+Copyright © 2022 Mashiro Tamane
 
 ○このソフトについて
 Windows の環境変数の"PATH"を編集するためのツールです。
