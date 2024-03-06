@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SharpPathEditor"
         mc:Ignorable="d"
-        Title="このソフトについて" Height="200" Width="293" ResizeMode="CanMinimize" WindowStartupLocation="CenterOwner">
+        Title="このソフトについて" Height="216" Width="293" ResizeMode="CanMinimize" WindowStartupLocation="CenterOwner">
     <Grid>
         <TextBlock x:Name="AppNameTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
         <TextBlock x:Name="VersionTextBlock" HorizontalAlignment="Left" Margin="10,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="16"/>
         <TextBlock x:Name="DeveloperTextBlock" HorizontalAlignment="Left" Margin="10,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="DotNetVersionTextBlock" HorizontalAlignment="Left" Margin="10,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="16"/>
         <Button x:Name="OKButton" IsDefault="True" Width="90" Content="_OK" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Click="OKButton_Click"/>
 
     </Grid>

@@ -14,6 +14,7 @@ namespace SharpPathEditor
             AppNameTextBlock.Text = VersionInfo.AppName;
             VersionTextBlock.Text = $"Version {VersionInfo.AppVersion}";
             DeveloperTextBlock.Text = $"Developer: {VersionInfo.Developer}";
+            DotNetVersionTextBlock.Text = VersionInfo.DotNetRuntime;
         }
 
         private void OKButton_Click(object sender, RoutedEventArgs e)
