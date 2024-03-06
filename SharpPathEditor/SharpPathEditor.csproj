@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <Version>$(VersionPrefix)$(VersionSuffix)</Version>
-	  <VersionPrefix>1.2.0</VersionPrefix>
+	  <VersionPrefix>1.2.1</VersionPrefix>
 	  <VersionSuffix>beta</VersionSuffix>
 	  <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <Authors>Mashiro Tamane</Authors>
