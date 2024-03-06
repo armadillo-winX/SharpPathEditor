@@ -5,11 +5,14 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <Version>1.2.0</Version>
+    <Version>$(VersionPrefix)$(VersionSuffix)</Version>
+	  <VersionPrefix>1.2.0</VersionPrefix>
+	  <VersionSuffix>beta</VersionSuffix>
+	  <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <Authors>Mashiro Tamane</Authors>
     <Company>Mashiro Tamane</Company>
     <Product>Sharp Path Editor</Product>
-    <Copyright>Copyright © 2022 Mashiro Tamane</Copyright>
+    <Copyright>Copyright © 2022 $(Author)</Copyright>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <UseWindowsForms>True</UseWindowsForms>
   </PropertyGroup>
