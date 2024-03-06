@@ -11,9 +11,9 @@ namespace SharpPathEditor
         {
             InitializeComponent();
 
-            AppNameTextBlock.Text = VerInfo.AppName;
-            VersionTextBlock.Text = $"Version {VerInfo.AppVersion}";
-            DeveloperTextBlock.Text = $"Developer: {VerInfo.Developer}";
+            AppNameTextBlock.Text = VersionInfo.AppName;
+            VersionTextBlock.Text = $"Version {VersionInfo.AppVersion}";
+            DeveloperTextBlock.Text = $"Developer: {VersionInfo.Developer}";
         }
 
         private void OKButton_Click(object sender, RoutedEventArgs e)

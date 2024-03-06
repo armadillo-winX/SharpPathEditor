@@ -10,7 +10,7 @@ namespace SharpPathEditor
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly string _appName = VerInfo.AppName;
+        private readonly string _appName = VersionInfo.AppName;
 
         private AboutDialog _aboutDialog = null;
 

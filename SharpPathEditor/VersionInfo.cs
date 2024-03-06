@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace SharpPathEditor
 {
-    internal class VerInfo
+    internal class VersionInfo
     {
         private static readonly string _appPath = typeof(App).Assembly.Location;
 
