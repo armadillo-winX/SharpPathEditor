@@ -7,12 +7,12 @@ Windows の環境変数の"PATH"を編集するためのツールです。
 ○推奨動作環境
 Windows 10/Windows 11
 
-.NET Desktop Runtime 6.0 が必要です。
+.NET Desktop Runtime 8.0 が必要です。
 
 ○開発環境
 Microsoft Windows 11 Insider Preview Dev
 Microsoft Visual Studio 2022
-.NET 6.0
+.NET 8.0
 
 ○ソースコード
 ソースコードはGitHubに公開しています。
