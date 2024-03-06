@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace SharpPathEditor
 {
@@ -11,5 +12,7 @@ namespace SharpPathEditor
         public static string AppVersion => FileVersionInfo.GetVersionInfo(_appPath).ProductVersion;
 
         public static string Developer => FileVersionInfo.GetVersionInfo(_appPath).CompanyName;
+
+        public static string DotNetRuntime => RuntimeInformation.FrameworkDescription;
     }
 }
