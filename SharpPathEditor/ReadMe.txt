@@ -28,6 +28,11 @@ https://github.com/armadillo-winX/SharpPathEditor
 
 ○更新履歴
 
+ver1.2.1-beta
+・ランタイムを .NET 8.0 に更新。
+・バージョン情報ダイアログにランタイム情報を表示するようにした。
+・バージョン付与に関する修正。
+
 ver1.2.0 beta
 ・ツールバー追加。
 ・Windowsツールの起動コマンド追加。
