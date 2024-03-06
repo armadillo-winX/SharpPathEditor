@@ -12,7 +12,7 @@
     <Authors>Mashiro Tamane</Authors>
     <Company>Mashiro Tamane</Company>
     <Product>Sharp Path Editor</Product>
-    <Copyright>Copyright © 2022 $(Author)</Copyright>
+    <Copyright>Copyright © 2022 $(Authors)</Copyright>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <UseWindowsForms>True</UseWindowsForms>
   </PropertyGroup>
