@@ -12,7 +12,7 @@ namespace SharpPathEditor
     {
         private readonly string _appName = VerInfo.AppName;
 
-        private AboutDialog _aboutDialog = null;
+        private AboutDialog? _aboutDialog = null;
 
         public MainWindow()
         {
@@ -214,7 +214,7 @@ namespace SharpPathEditor
             if (index >= 1)
             {
 
-                string currentPath = SystemPathListBox.SelectedValue.ToString();
+                string? currentPath = SystemPathListBox.SelectedValue.ToString();
                 SystemPathListBox.Items[index] = SystemPathListBox.Items[SystemPathListBox.SelectedIndex - 1].ToString();
                 SystemPathListBox.Items[index - 1] = currentPath;
 
@@ -227,7 +227,7 @@ namespace SharpPathEditor
             if (index != -1 && index != SystemPathListBox.Items.Count - 1)
             {
 
-                string currentPath = SystemPathListBox.SelectedValue.ToString();
+                string? currentPath = SystemPathListBox.SelectedValue.ToString();
                 SystemPathListBox.Items[index] = SystemPathListBox.Items[SystemPathListBox.SelectedIndex + 1].ToString();
                 SystemPathListBox.Items[index + 1] = currentPath;
 
@@ -257,7 +257,7 @@ namespace SharpPathEditor
             if (index >= 1)
             {
 
-                string currentPath = CurrentUserPathListBox.SelectedValue.ToString();
+                string? currentPath = CurrentUserPathListBox.SelectedValue.ToString();
                 CurrentUserPathListBox.Items[index] = CurrentUserPathListBox.Items[CurrentUserPathListBox.SelectedIndex - 1].ToString();
                 CurrentUserPathListBox.Items[index - 1] = currentPath;
 
@@ -271,7 +271,7 @@ namespace SharpPathEditor
             if (index != -1 && index != CurrentUserPathListBox.Items.Count - 1)
             {
 
-                string currentPath = CurrentUserPathListBox.SelectedValue.ToString();
+                string? currentPath = CurrentUserPathListBox.SelectedValue.ToString();
                 CurrentUserPathListBox.Items[index] = CurrentUserPathListBox.Items[CurrentUserPathListBox.SelectedIndex + 1].ToString();
                 CurrentUserPathListBox.Items[index + 1] = currentPath;
 
