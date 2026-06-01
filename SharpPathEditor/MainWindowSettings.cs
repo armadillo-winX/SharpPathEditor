@@ -27,22 +27,33 @@ namespace SharpPathEditor
         {
             string? mainWindowSettingsFile = FilePathInfo.MainWindowSettings;
 
-            MainWindowSettings mainWindowSettings = new();
+            MainWindowSettings? mainWindowSettings;
             if (File.Exists(mainWindowSettingsFile))
             {
                 XmlSerializer mainWindowSettingsSerializer = new(typeof(MainWindowSettings));
                 FileStream fs = new(mainWindowSettingsFile, FileMode.Open);
 
-                mainWindowSettings = (MainWindowSettings)mainWindowSettingsSerializer.Deserialize(fs);
+                mainWindowSettings = (MainWindowSettings?)mainWindowSettingsSerializer.Deserialize(fs);
                 fs.Close();
             }
             else
             {
+                mainWindowSettings = new();
                 mainWindowSettings.Width = 600;
                 mainWindowSettings.Height = 385;
                 mainWindowSettings.IsMaximize = false;
                 mainWindowSettings.SelectedTabIndex = 0;
             }
+
+            if (mainWindowSettings == null)
+            {
+                mainWindowSettings = new();
+                mainWindowSettings.Width = 600;
+                mainWindowSettings.Height = 385;
+                mainWindowSettings.IsMaximize = false;
+                mainWindowSettings.SelectedTabIndex = 0;
+            }
+
             return mainWindowSettings;
         }
     }
