@@ -2,7 +2,7 @@
 
 namespace SharpPathEditor
 {
-    internal class EditPath
+    internal class PathRegistryEditor
     {
         private static readonly string _systemPathRegKey = @"SYSTEM\CurrentControlSet\Control\Session Manager\Environment";
         private static readonly string _currentUserPathRegKey = "Environment";

@@ -44,7 +44,7 @@ namespace SharpPathEditor
             CurrentUserPathListBox.Items.Clear();
             try
             {
-                string[] systemPathList = EditPath.GetSystemPathList();
+                string[] systemPathList = PathRegistryEditor.GetSystemPathList();
                 if (systemPathList != null)
                 {
                     foreach (string systemPath in systemPathList)
@@ -57,7 +57,7 @@ namespace SharpPathEditor
                     }
                 }
 
-                string[] currentUserPathList = EditPath.GetCurrentUserPathList();
+                string[] currentUserPathList = PathRegistryEditor.GetCurrentUserPathList();
                 if (currentUserPathList != null)
                 {
                     foreach (string currentUserPath in currentUserPathList)
@@ -81,7 +81,7 @@ namespace SharpPathEditor
             string[] systemPathList = SystemPathListBox.Items.Cast<string>().ToArray();
             try
             {
-                EditPath.SaveSystemPath(systemPathList);
+                PathRegistryEditor.SaveSystemPath(systemPathList);
                 _ = MessageBox.Show(this, "保存しました。", _appName,
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }
@@ -97,7 +97,7 @@ namespace SharpPathEditor
             string[] currentUserPathList = CurrentUserPathListBox.Items.Cast<string>().ToArray();
             try
             {
-                EditPath.SaveCurrentUserPath(currentUserPathList);
+                PathRegistryEditor.SaveCurrentUserPath(currentUserPathList);
                 _ = MessageBox.Show(this, "保存しました。", _appName,
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }
