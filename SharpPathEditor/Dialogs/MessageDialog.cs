@@ -4,7 +4,7 @@ namespace SharpPathEditor.Dialogs
 {
     internal class MessageDialog
     {
-        public static void ShowErrorMessageDialog(string errorMessage, Window ownerWindow = null)
+        public static void ShowErrorMessageDialog(string errorMessage, Window? ownerWindow = null)
         {
             ErrorMessageDialog errorMessageDialog = new();
             errorMessageDialog.Message = errorMessage;
