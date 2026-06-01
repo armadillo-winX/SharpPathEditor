@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <Version>1.1.0</Version>
+	  <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <Authors>Mashiro Tamane</Authors>
     <Company>Mashiro Tamane</Company>
     <Product>Sharp Path Editor</Product>
