@@ -31,7 +31,7 @@ namespace SharpPathEditor
 
             if (registryKey != null)
             {
-                string? data = (string?)registryKey.GetValue("Path");
+                string? data = (string?)registryKey.GetValue("Path", null, RegistryValueOptions.DoNotExpandEnvironmentNames);
                 if (string.IsNullOrEmpty(data)) return null;
 
                 registryKey.Close();
@@ -50,7 +50,7 @@ namespace SharpPathEditor
 
             if (registryKey != null)
             {
-                string? data = (string?)registryKey.GetValue("Path");
+                string? data = (string?)registryKey.GetValue("Path", null, RegistryValueOptions.DoNotExpandEnvironmentNames);
                 if (string.IsNullOrEmpty(data)) return null;
 
                 registryKey.Close();
