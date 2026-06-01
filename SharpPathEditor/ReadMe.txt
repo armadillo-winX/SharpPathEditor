@@ -12,7 +12,7 @@ Windows 10/Windows 11
 ○開発環境
 Microsoft Windows 11 Insider Preview Dev
 Microsoft Visual Studio 2022
-.NET 6.0
+.NET 10.0
 
 ○ソースコード
 ソースコードはGitHubに公開しています。
