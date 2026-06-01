@@ -12,7 +12,7 @@ namespace SharpPathEditor
             string data = string.Join(";", systemPathList);
 
             RegistryKey registryKey = Registry.LocalMachine.CreateSubKey(_systemPathRegKey);
-            registryKey.SetValue("Path", data);
+            registryKey.SetValue("Path", data, RegistryValueKind.ExpandString);
             registryKey.Close();
         }
 
@@ -21,7 +21,7 @@ namespace SharpPathEditor
             string data = string.Join(";", currentUserPathList);
 
             RegistryKey registryKey = Registry.CurrentUser.CreateSubKey(_currentUserPathRegKey);
-            registryKey.SetValue("Path", data);
+            registryKey.SetValue("Path", data, RegistryValueKind.ExpandString);
             registryKey.Close();
         }
 
