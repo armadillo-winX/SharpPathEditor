@@ -1,4 +1,4 @@
-﻿using System.IO;
+﻿using System;
 
 namespace SharpPathEditor
 {
@@ -6,7 +6,7 @@ namespace SharpPathEditor
     {
         public static string AppPath => typeof(App).Assembly.Location;
 
-        public static string AppLocation => Path.GetDirectoryName(AppPath);
+        public static string AppLocation => AppDomain.CurrentDomain.BaseDirectory;
 
         public static string MainWindowSettings => $"{AppLocation}\\MainWindowSettings.xml";
     }
