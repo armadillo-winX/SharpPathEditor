@@ -25,13 +25,15 @@ namespace SharpPathEditor
             registryKey.Close();
         }
 
-        public static string[] GetSystemPathList()
+        public static string[]? GetSystemPathList()
         {
-            RegistryKey registryKey = Registry.LocalMachine.OpenSubKey(_systemPathRegKey, false);
+            RegistryKey? registryKey = Registry.LocalMachine.OpenSubKey(_systemPathRegKey, false);
 
             if (registryKey != null)
             {
-                string data = (string)registryKey.GetValue("Path");
+                string? data = (string?)registryKey.GetValue("Path");
+                if (string.IsNullOrEmpty(data)) return null;
+
                 registryKey.Close();
 
                 return data.Split(';');
@@ -42,13 +44,15 @@ namespace SharpPathEditor
             }
         }
 
-        public static string[] GetCurrentUserPathList()
+        public static string[]? GetCurrentUserPathList()
         {
-            RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(_currentUserPathRegKey, false);
+            RegistryKey? registryKey = Registry.CurrentUser.OpenSubKey(_currentUserPathRegKey, false);
 
             if (registryKey != null)
             {
-                string data = (string)registryKey.GetValue("Path");
+                string? data = (string?)registryKey.GetValue("Path");
+                if (string.IsNullOrEmpty(data)) return null;
+
                 registryKey.Close();
 
                 return data.Split(';');
