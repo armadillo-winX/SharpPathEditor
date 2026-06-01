@@ -44,7 +44,7 @@ namespace SharpPathEditor
             CurrentUserPathListBox.Items.Clear();
             try
             {
-                string[] systemPathList = PathRegistryEditor.GetSystemPathList();
+                string[]? systemPathList = PathRegistryEditor.GetSystemPathList();
                 if (systemPathList != null)
                 {
                     foreach (string systemPath in systemPathList)
@@ -57,7 +57,7 @@ namespace SharpPathEditor
                     }
                 }
 
-                string[] currentUserPathList = PathRegistryEditor.GetCurrentUserPathList();
+                string[]? currentUserPathList = PathRegistryEditor.GetCurrentUserPathList();
                 if (currentUserPathList != null)
                 {
                     foreach (string currentUserPath in currentUserPathList)
